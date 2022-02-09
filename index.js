@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
+const PORT = process.env.PORT || 3000
 //Validações
 const validate = require('./validation')
 
@@ -102,6 +103,6 @@ app.post('/promos', (req, res) => {
   }
 })
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Backend executando...")
 })
